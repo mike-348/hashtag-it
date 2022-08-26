@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/DragDropFile.css";
-import image1 from "/Users/michaelmartin/dev/hashtag-it/src/download.jpg";
+import image1 from "../download.jpg";
 
 // drag drop file component
 export default function DragDropFile() {
@@ -102,9 +102,6 @@ export default function DragDropFile() {
         ></div>
       )}
       <div className="div-2">
-        {
-          <img src={image1} style={{ width: "300px" }} alt="hi" />
-        }
         {/* {image !== null && (
           <img src={image} style={{ width: "300px" }} alt="hi" />
         )} */}
