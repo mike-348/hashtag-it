@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-function ShowImage({ imageURL }) {
+function ShowImage({ imageUrl }) {
+
   return (
     <div>
       <img
-        src={imageURL}
+        src={imageUrl}
         style={{ width: "400px" }}
         className="image"
         alt="hi"

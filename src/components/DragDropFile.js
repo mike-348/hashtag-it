@@ -3,13 +3,9 @@ import "../styles/DragDropFile.css";
 import ShowImage from "./ShowImage";
 
 // drag drop file component
-function DragDropFile() {
-  // drag state
+function DragDropFile({ setImageUrl }) {
   const [dragActive, setDragActive] = React.useState(false);
-  // ref
   const inputRef = React.useRef(null);
-
-  const [imageUrl, setImageUrl] = React.useState(null);
 
   // handle drag events
   const handleDrag = function (e) {
@@ -100,7 +96,7 @@ function DragDropFile() {
           onDrop={handleDrop}
         ></div>
       )}
-      <div>{imageUrl && <ShowImage imageURL={imageUrl} />}</div>
+      {/* <div>{imageUrl && <ShowImage imageURL={imageUrl} />}</div> */}
     </form>
   );
 }
