@@ -1,15 +1,28 @@
-import React from "react";
-import "../styles/TextBox.css";
+import React, { useEffect } from "react";
 
-export default function TextBox(props) {
+function TextBox({ imageUrl }) {
+  const [text, SetText] = React.useState("");
+
+  function clickHandler (e) {
+    navigator.clipboard.writeText(text);
+    console.log("button clicked");
+    e.preventDefault();
+  }
+
   return (
-    <div className="text-box">
+    <form>
       <textarea
-        className="text-box-text"
-        placeholder="Type here..."
-        onChange={props.onChange}
-        value={props.value}
-      />
-    </div>
+        className="text-box"
+        placeholder="Enter text here"
+        onChange={(e) => SetText(e.target.value)}
+      ></textarea>
+      <div className="text-box-button-div">
+        <button className="text-box-button" onClick={clickHandler}>
+          Copy to clipboard!
+        </button>
+      </div>
+    </form>
   );
 }
+
+export default TextBox;

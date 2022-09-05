@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/DragDropFile.css";
 import ShowImage from "./ShowImage";
 
 // drag drop file component
@@ -96,7 +95,6 @@ function DragDropFile({ setImageUrl }) {
           onDrop={handleDrop}
         ></div>
       )}
-      {/* <div>{imageUrl && <ShowImage imageURL={imageUrl} />}</div> */}
     </form>
   );
 }
