@@ -1,15 +1,15 @@
 import React from "react";
 import "../styles/DragDropFile.css";
-import image1 from "../download.jpg";
+import ShowImage from "./ShowImage";
 
 // drag drop file component
-export default function DragDropFile() {
+function DragDropFile() {
   // drag state
   const [dragActive, setDragActive] = React.useState(false);
   // ref
   const inputRef = React.useRef(null);
 
-  const [image, setImage] = React.useState(null);
+  const [imageUrl, setImageUrl] = React.useState(null);
 
   // handle drag events
   const handleDrag = function (e) {
@@ -53,7 +53,6 @@ export default function DragDropFile() {
     console.log(files[0]);
     data.append("file", files[0]);
     data.append("upload_preset", "images");
-    // setLoading(true);
     const res = await fetch(
       "https://api.cloudinary.com/v1_1/dpomruunm/image/upload",
       {
@@ -63,12 +62,12 @@ export default function DragDropFile() {
     );
     const file = await res.json();
     console.log(file.secure_url);
-    setImage(file.secure_url);
-    // setLoading(false);
+    setImageUrl(file.secure_url);
   };
 
   return (
     <form
+      className="drag-drop-file"
       id="form-file-upload"
       onDragEnter={handleDrag}
       onSubmit={(e) => e.preventDefault()}
@@ -101,11 +100,9 @@ export default function DragDropFile() {
           onDrop={handleDrop}
         ></div>
       )}
-      <div className="div-2">
-        {/* {image !== null && (
-          <img src={image} style={{ width: "300px" }} alt="hi" />
-        )} */}
-      </div>
+      <div>{imageUrl && <ShowImage imageURL={imageUrl} />}</div>
     </form>
   );
 }
+
+export default DragDropFile;

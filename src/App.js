@@ -1,18 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import DragDropFile from "./components/DragDropFile";
-import TextBox from "./components/TextBox";
-import Image from "./components/Image";
-
+import ShowImage from "./components/ShowImage";
 
 function App() {
   return (
     <div className="App">
-      <h1>#hashtag it</h1>
+      <h1>#hashtag it!</h1>
       <DragDropFile />
-      <TextBox />
-      <Image />
-      {/* <Image /> */}
+      <div>{<ShowImage imageURL={imageURL} />}</div>
     </div>
   );
 }
