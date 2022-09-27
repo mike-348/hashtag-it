@@ -21,9 +21,6 @@ I think Machine Learning is a fascinating subject in Computer Science and I want
 - [Cloudinary](https://cloudinary.com/products/programmable_media)
 - [Cloud Vision API](https://cloud.google.com/vision)
 - [React](https://reactjs.org)
-- [Heroku](https://www.heroku.com) (app hosting)
-- [Node.js](https://nodejs.org) (server)
-- [PostgreSQL](https://www.postgresql.org) (back end)
 
 --
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
