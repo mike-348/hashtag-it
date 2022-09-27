@@ -49,7 +49,7 @@ function DragDropFile({ setImageUrl }) {
     data.append("file", files[0]);
     data.append("upload_preset", "images");
     const res = await fetch(
-      "https://api.cloudinary.com/v1_1/dpomruunm/image/upload",
+      `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
       {
         method: "POST",
         body: data,
