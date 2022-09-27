@@ -4,6 +4,7 @@
 
 Hashtag-it is a web service that utilizes Google's Machine Learning [Cloud Vision API](https://cloud.google.com/vision) to generate hashtags for an image. 
 
+![ezgif-2-6840b31254](https://user-images.githubusercontent.com/97630089/192583401-dc111060-4d4e-4408-8580-aea28e2afeea.gif)
 
 ## How it works
 
