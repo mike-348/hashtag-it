@@ -15,7 +15,7 @@ function TextBox({ imageUrl }) {
   }, [imageUrl]);
 
   async function getResponse() {
-    //wait 3 seconds
+    //wait 1.5 seconds
     await new Promise((r) => setTimeout(r, 1500));
     const response = await fetch(
       `https://vision.googleapis.com/v1/images:annotate?key=${process.env.REACT_APP_GOOGLE_API_KEY}`,

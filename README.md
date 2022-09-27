@@ -14,7 +14,7 @@ When users upload an image to the site, it is sent to [Cloudinary](https://cloud
 
 ## Why did I make it?
 
-I think Machine Learning is a fascinating subject in Computer Science and I wanted to create a tool that let me explore the applications of a Machine Learning algorithm. Additionally, I wanted to create a tool that could be used by anyone to generate hashtags for their images. 
+I think Machine Learning is a fascinating subject in Computer Science. I was looking to explore the applications of a Machine Learning algorithm when I came across @vinitshahdeo project Hashtagify which I thought was amazing! I set out to recreate this application my own way to better understand the React framework, building a front end, and making API calls.
 
 ## Tools used
 
