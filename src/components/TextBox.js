@@ -55,7 +55,6 @@ function TextBox({ imageUrl }) {
           hashtag = "#" + hashtag;
           list.push(hashtag);
           setText(list.join(" "));
-          // setText((text) => text + "#" + data.responses[0].labelAnnotations[i].description + " ");
         }
       });
   }
@@ -78,9 +77,3 @@ function TextBox({ imageUrl }) {
 }
 
 export default TextBox;
-
-
-/**
- * Thank you for taking the time to meet with me on Friday.
- * It
- */
